@@ -40,7 +40,7 @@ jobs:
       working-directory: ${{runner.workspace}}/build
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
-      run: cmake --build . --config $BUILD_TYPE
+      run: cmake --build . --config $BUILD_TYPE&&cd "regular expression file replacer"&&make
 
     - name: Test
       working-directory: ${{runner.workspace}}/build
@@ -62,7 +62,6 @@ jobs:
       working-directory: ${{runner.workspace}}/build
       shell: bash
       run: |
-          mv CMakeFiles/3.17.0/CompilerIdCXX/a.out ./regexplace.out
           zip --junk-paths linuxcxx regexplace.out
     - name: Upload Release Asset
       id: upload-release-asset 
