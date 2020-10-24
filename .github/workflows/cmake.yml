@@ -59,10 +59,11 @@ jobs:
           draft: false
           prerelease: false
     - name: zipping # This would actually build your project, using zip for an example artifact
-      working-directory: ${{runner.workspace}}/build/regular expression replacer/
+      working-directory: ${{runner.workspace}}/build
       shell: bash
       run: |
-          ls
+          sudo apt-get install tree
+          tree
           zip --junk-paths linuxcxx regexplace
     - name: Upload Release Asset
       id: upload-release-asset 
