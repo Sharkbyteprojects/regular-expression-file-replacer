@@ -62,8 +62,6 @@ jobs:
       working-directory: ${{runner.workspace}}/build
       shell: bash
       run: |
-          sudo apt-get install tree
-          tree
           mv CMakeFiles/3.17.0/CompilerIdCXX/a.out ./regexplace.out
           zip --junk-paths linuxcxx regexplace.out
     - name: Upload Release Asset
@@ -73,6 +71,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ${{runner.workspace}}/build/regular expression replacer/linuxcxx.zip
+          asset_path: ${{runner.workspace}}/build/linuxcxx.zip
           asset_name: linuxcxx.zip
           asset_content_type: application/zip
