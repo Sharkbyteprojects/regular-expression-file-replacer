@@ -62,6 +62,7 @@ jobs:
       working-directory: ${{runner.workspace}}/build
       shell: bash
       run: |
+          sudo apt install tree&&tree
           zip --junk-paths linuxcxx regexplace.out
     - name: Upload Release Asset
       id: upload-release-asset 
