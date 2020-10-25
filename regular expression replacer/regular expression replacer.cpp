@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
 			}
 		}
 		else {
-			if (!fileca(argv[0 + toappendcount], argv[2 + toappendcount], argv[1 + toappendcount])) {
+			if (!fileca(argv[0 + toappendcount], argv[2 + toappendcount], argv[1 + toappendcount], nothing)) {
 				return -1;
 			}
 			else {
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 	return 0;
 }
 
-bool fileca(char* filename, char* regexp, char* outfile, char* tolll = nothing) {
+bool fileca(char* filename, char* regexp, char* outfile, char* tolll) {
 	regex e(regexp);
 	if (filename == pipe && outfile != pipe) {
 		ofstream data(outfile, ios::trunc);
