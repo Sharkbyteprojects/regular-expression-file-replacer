@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
 
 bool fileca(char* filename, char* regexp, char* outfile, char* tolll) {
 	regex e(regexp);
-	if (filename == pipe && outfile != pipe) {
+	if (filename == (char*)pipe && outfile != (char*)pipe) {
 		ofstream data(outfile, ios::trunc);
 		if (data.fail()) {
 			cerr << errtext << outfile << errtextb << "Writing" << endl;
@@ -45,7 +45,7 @@ bool fileca(char* filename, char* regexp, char* outfile, char* tolll) {
 		autowhile(data, e, tolll);
 		data.close();
 	}
-	else if (filename != pipe && outfile == pipe) {
+	else if (filename != (char*)pipe && outfile == (char*)pipe) {
 		ifstream infile(filename);
 		if (infile.fail()) {
 			cerr << errtext << filename << errtextb << "Reading" << endl;
@@ -54,7 +54,7 @@ bool fileca(char* filename, char* regexp, char* outfile, char* tolll) {
 		autowhile(infile, e, tolll);
 		infile.close();
 	}
-	else if (filename == pipe && outfile == pipe) {
+	else if (filename == (char*)pipe && outfile == (char*)pipe) {
 		autowhile(e, tolll);
 	}
 	else {
