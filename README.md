@@ -1,7 +1,9 @@
 # regular-expression-file-replacer
 search with regex in file line per line and replace it
 
-run regex without args to become help
+run `regexplace` without args to become help
+
+---
 
 - [Download and Install](https://github.com/Sharkbyteprojects/regular-expression-file-replacer/releases/tag/v1.0.0)
 
