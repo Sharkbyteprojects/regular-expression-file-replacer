@@ -13,3 +13,4 @@ You need cmake to build your own version
 ## Screenshot
 
 ![<img src="https://github.com/Sharkbyteprojects/regular-expression-file-replacer/raw/master/.readmeassets/screenshot%20ubuntu.png">](https://github.com/Sharkbyteprojects/regular-expression-file-replacer/raw/master/.readmeassets/screenshot%20ubuntu.png)
+Bug in the Terminal, the last line of `cat file.txt` was removed after scaling the console. The last line of `file.txt` is `Hellox Spino`
