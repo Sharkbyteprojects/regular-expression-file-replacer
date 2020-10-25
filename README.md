@@ -8,3 +8,8 @@ You need cmake to build your own version
 - Run `cmake`
 - then `make`
 - then you become your binary
+
+
+## Screenshot
+
+![<img src="https://github.com/Sharkbyteprojects/regular-expression-file-replacer/raw/master/.readmeassets/screenshot%20ubuntu.png">](https://github.com/Sharkbyteprojects/regular-expression-file-replacer/raw/master/.readmeassets/screenshot%20ubuntu.png)
