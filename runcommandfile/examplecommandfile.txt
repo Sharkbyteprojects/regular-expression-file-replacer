@@ -1,0 +1,2 @@
+echo hello
+echo This is also a command
